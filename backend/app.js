@@ -24,6 +24,10 @@ pool.connect((error, client, release) => {
 //ENV config
 dotenv.config();
 
+app.get("/", (request, response) => {
+  response.json({ info: "Welcome to the Ecommerce App" });
+});
+
 // MiddleWares
 app.use(cors());
 app.use(express.json());

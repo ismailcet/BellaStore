@@ -36,20 +36,23 @@ const geProductById = async (request, response) => {
 };
 
 //Create Product
-const createProduct = (request, response) => {
-  const { name, price, image, size, color } = request.body;
-  console.log(name, price, image, size, color);
-  pool.query(
-    "INSERT INTO products (name,price,image,size,color) VALUES ($1,$2,$3,$4,$5)",
-    [name, price, image, size, color],
-    (error, results) => {
-      if (error) {
-        response.status(400).json({ isSuccess: false });
-        throw error;
+const createProduct = async (request, response) => {
+  const { name, price, description, image, size, color, cat } = request.body;
+  try {
+    await pool.query(
+      "INSERT INTO products (name,price,description,image,size,color,category_ids) VALUES ($1,$2,$3,$4,$5,$6,$7)",
+      [name, price, description, image, size, color, cat],
+      (error, results) => {
+        if (error) {
+          response.status(400).json({ isSuccess: false });
+          throw error;
+        }
+        response.status(201).json(results);
       }
-      response.status(201).json(results);
-    }
-  );
+    );
+  } catch (error) {
+    response.status(400).json(error);
+  }
 };
 
 const updateProduct = async (request, response) => {
@@ -81,7 +84,7 @@ const filterProductBy = async (request, response) => {
 
   try {
     pool.query(
-      'SELECT * FROM public."ProductCategories" INNER JOIN categories cat ON cat.id = public."ProductCategories".category_id INNER JOIN products pro ON pro.id = public."ProductCategories".product_id WHERE cat.name=$1',
+      'SELECT * FROM public."productCategories" INNER JOIN categories cat ON cat.id = public."productCategories".category_id INNER JOIN products pro ON pro.id = public."productCategories".product_id WHERE cat.name=$1',
       [cat],
       (error, results) => {
         if (error) {
