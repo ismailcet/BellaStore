@@ -84,7 +84,7 @@ const filterProductBy = async (request, response) => {
 
   try {
     pool.query(
-      'SELECT * FROM public."productCategories" INNER JOIN categories cat ON cat.id = public."productCategories".category_id INNER JOIN products pro ON pro.id = public."productCategories".product_id WHERE cat.name=$1',
+      "SELECT * FROM products WHERE $1= ANY (categoryname);",
       [cat],
       (error, results) => {
         if (error) {
