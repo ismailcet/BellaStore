@@ -16,7 +16,7 @@ const getAllProducts = async (request, response) => {
 };
 
 //Get Product By Id
-const geProductById = async (request, response) => {
+const getProductById = async (request, response) => {
   const id = parseInt(request.params.id);
   try {
     await pool.query(
@@ -101,7 +101,7 @@ const filterProductBy = async (request, response) => {
 module.exports = {
   createProduct,
   getAllProducts,
-  geProductById,
+  getProductById,
   updateProduct,
   filterProductBy,
 };
