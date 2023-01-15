@@ -58,3 +58,28 @@ const updateUser = async (request, response) => {
     response.status(400).json(error);
   }
 };
+
+const orderByUser = async (request, response) => {
+  const id = parseInt(request.params.id);
+  try {
+    await pool.query(
+      'SELECT users.id,users.firstname,users.surname,users.address1 , products.name,products.price,orders.ordered_date,public."orderDetails".size,public."orderDetails".quantity FROM ((public."orderDetails" INNER JOIN orders ON orders.id = public."orderDetails".order_id) INNER JOIN users ON users.id = public."orderDetails".user_id INNER JOIN products ON products.id = public."orderDetails".product_id) WHERE users.id=$1',
+      [id],
+      (error, results) => {
+        if (error) {
+          response.status(400).json(error);
+        }
+        response.status(200).json(results.rows);
+      }
+    );
+  } catch (error) {
+    response.status(400).json(error);
+  }
+};
+
+module.exports = {
+  getAllUsers,
+  getUserById,
+  updateUser,
+  orderByUser,
+};

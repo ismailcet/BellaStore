@@ -9,7 +9,7 @@ const pool = require("./models/index");
 const productRoute = require("./routes/productRoutes");
 const userRoute = require("./routes/userRoutes");
 const authRoute = require("./routes/authRoutes");
-
+const orderRoute = require("./routes/orderRoutes");
 //Define App function
 const app = express();
 
@@ -41,6 +41,9 @@ app.use(express.urlencoded({ extended: true }));
 //Routes
 app.use("/api/product", productRoute);
 app.use("/api/auth", authRoute);
+app.use("/api/user", userRoute);
+app.use("/api/order", orderRoute);
+
 app.listen(port, () => {
   console.log(`Bella Store listening on port ${port}`);
 });
