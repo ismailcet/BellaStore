@@ -1,0 +1,60 @@
+.Header {
+  padding: 1.25rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-side {
+  margin-right: 3.125rem;
+}
+.logo {
+  color: #212121;
+  font-size: 2rem;
+}
+.links-side {
+  flex: 2 0 0;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.nav-links li {
+  font-size: 1.25rem;
+  color: #212121;
+}
+.profile-side {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: #212121;
+}
+.name-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 1.25rem;
+}
+.name-section span {
+  color: #666666;
+  font-size: 1rem;
+}
+.name-section h6 {
+  font-size: 1.25rem;
+}
+.img-side {
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: #212121;
+  border-radius: 50%;
+}
+.btn-cart {
+  font-size: 1.5rem;
+  color: #666666;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: 1.5px solid #f1f1f1;
+  text-align: center;
+}

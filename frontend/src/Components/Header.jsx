@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout } from "antd";
 import { ShoppingCartOutlined } from "@ant-design/icons";
+import "./Header.css";
 const Header = () => {
   return (
     <>
@@ -23,7 +24,9 @@ const Header = () => {
           </div>
           <div className="img-side"></div>
           <div className="cart-side">
-            <ShoppingCartOutlined />
+            <button className="btn btn-cart">
+              <ShoppingCartOutlined />
+            </button>
           </div>
         </div>
       </Layout>
