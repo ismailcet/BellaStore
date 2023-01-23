@@ -1,0 +1,136 @@
+.Promotions {
+  margin-top: 6.25rem;
+}
+
+.promotions-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.promotions-info {
+  color: blue;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+.promotions-title {
+  font-size: 2rem;
+  color: #212121;
+  font-weight: 700;
+  margin-bottom: 2.8125rem;
+}
+
+/* Content Size */
+.content-container {
+  flex-wrap: nowrap;
+}
+.upper-side {
+  background-color: #d6d6d8;
+  height: 13.625rem;
+  margin-bottom: 0.875rem;
+  color: #212121;
+}
+.upper-side-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2.5rem;
+}
+.upper-title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.upper-title span {
+  font-size: 1.625rem;
+  font-weight: 800;
+}
+.upper-info {
+  font-size: 1.125rem;
+}
+.down-side {
+  background-color: #212121;
+  height: 13.625rem;
+  color: #fff;
+}
+.down-side-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.down-title {
+  font-size: 2.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.down-code {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+.promo-code {
+  width: 20.625rem;
+  height: 2.5rem;
+  background-color: #424242;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+.code {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: 0.25rem;
+}
+
+/* Right Side */
+.promotions-right-side {
+  margin-left: 0.875rem;
+}
+.left-side-col {
+  width: 17.625rem;
+  height: 28.125rem;
+  background-color: #efe1c7;
+}
+.left-title-content {
+  padding-left: 1.25rem;
+  padding-top: 14px;
+}
+.product-name {
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+.old-price {
+  color: #666;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: line-through;
+}
+.new-price {
+  color: #212121;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-left: 0.875rem;
+}
+.product-img-container {
+  height: 392px;
+  display: flex;
+  justify-content: center;
+}
+.product-img {
+  height: 100%;
+}
+.right-side-col {
+  width: 17.625rem;
+  height: 28.125rem;
+  background-color: #d7d7d9;
+  margin-left: 0.875rem;
+}
+.right-title-content {
+  padding-left: 1.25rem;
+  padding-top: 14px;
+}
