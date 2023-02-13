@@ -4,7 +4,7 @@ import "./HomeProduct.css";
 const HomeProducts = () => {
   return (
     <>
-      <Layout className="HomeProducts">HomeProducts</Layout>
+      <Layout className="HomeProducts">HomeProducts</Layout>a
     </>
   );
 };
