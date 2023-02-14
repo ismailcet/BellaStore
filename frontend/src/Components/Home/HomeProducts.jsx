@@ -4,7 +4,8 @@ import "./HomeProduct.css";
 const HomeProducts = () => {
   return (
     <>
-      <Layout className="HomeProducts">HomeProducts</Layout>a
+      <Layout className="HomeProducts">HomeProducts</Layout>
+      Yarın Başlanılacak
     </>
   );
 };
